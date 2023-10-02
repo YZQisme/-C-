@@ -1,0 +1,33 @@
+#pragma once
+#define TRUE 1
+#define FALSE 0
+#define DONE 1
+#define ERROR 0
+#define INFEASIBLE -1
+#define OVERFLOW -2
+typedef int Status;
+typedef int ElemType;
+#define LIST_INIT_SIZE 30
+#define LISTINCREMENT 10
+#include <stdlib.h>
+#include <iostream>
+static short increasetimes = 1;
+class SqList {
+protected:
+	ElemType* FirstElem;
+	int length;
+	int listsize;
+public:
+	SqList(void);
+	~SqList(void);
+	void Clear();
+	bool IsEmpty();
+	int GetLength();
+	Status GetElem(int i, ElemType* e);
+	int LocateElem(ElemType e, bool (*Compare)(ElemType, ElemType));
+	Status PriorElem(ElemType cur_e, ElemType* pre_e);
+	Status NextElem(ElemType cur_e, ElemType* next_e);
+	Status ListInsert(int i, ElemType e);
+	Status ListDelete(int i, ElemType* e);
+	Status ListTraverse(Status(*visit)(ElemType));
+};
