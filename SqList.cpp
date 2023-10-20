@@ -1,6 +1,5 @@
 #include "SqList.h"
 #include <iostream>
-
 SqList::SqList(void) {
 	if (FirstElem = (ElemType*)malloc(LIST_INIT_SIZE * sizeof(ElemType))) {
 		length = 0;
@@ -13,13 +12,13 @@ SqList::SqList(void) {
 SqList::~SqList(void) {
 	free(FirstElem);
 }
-void SqList::Clear() {
+void SqList::ClearList() {
 	length = 0;
 }
-bool SqList::IsEmpty() {
+bool SqList::ListEmpty() {
 	return (length == 0);
 }
-int SqList::GetLength() {
+int SqList::ListLength() {
 	return length;
 }
 Status SqList::GetElem(int i, ElemType* e) {
@@ -32,7 +31,7 @@ Status SqList::GetElem(int i, ElemType* e) {
 	}
 }
 int SqList::LocateElem(ElemType e, bool (*Compare)(ElemType, ElemType)) {
-	if (SqList::IsEmpty()) {
+	if (SqList::ListEmpty()) {
 		return ERROR;
 	}
 	else {
@@ -95,5 +94,10 @@ Status SqList::ListTraverse(Status(*visit)(ElemType)) {
 			return ERROR;
 		}
 	}
+	return DONE;
+}
+Status SqList::ListChange(int position, ElemType newelem) {
+	if (position > length) { return ERROR; }
+	*(FirstElem + position - 1) = newelem;
 	return DONE;
 }

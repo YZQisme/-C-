@@ -1,8 +1,2 @@
 ﻿  main.cpp
-C:\Users\YZQ\Desktop\数据结构的实现(C++)\数据结构的实现(C++)\SqList.h(7,1): warning C4005: “OVERFLOW”: 宏重定义
-D:\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h(971,1): message : 参见“OVERFLOW”的前一个定义
-  SqList.cpp
-D:\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h(971,1): warning C4005: “OVERFLOW”: 宏重定义
-C:\Users\YZQ\Desktop\数据结构的实现(C++)\数据结构的实现(C++)\SqList.h(7,1): message : 参见“OVERFLOW”的前一个定义
-  正在生成代码...
   数据结构的实现(C++).vcxproj -> C:\Users\YZQ\Desktop\数据结构的实现(C++)\数据结构的实现(C++)\x64\Debug\数据结构的实现(C++).exe

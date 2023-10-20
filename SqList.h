@@ -7,7 +7,7 @@
 #define OVERFLOW -2
 typedef int Status;
 typedef int ElemType;
-#define LIST_INIT_SIZE 30
+#define LIST_INIT_SIZE 100
 #define LISTINCREMENT 10
 #include <stdlib.h>
 #include <iostream>
@@ -20,9 +20,9 @@ protected:
 public:
 	SqList(void);
 	~SqList(void);
-	void Clear();
-	bool IsEmpty();
-	int GetLength();
+	void ClearList();
+	bool ListEmpty();
+	int ListLength();
 	Status GetElem(int i, ElemType* e);
 	int LocateElem(ElemType e, bool (*Compare)(ElemType, ElemType));
 	Status PriorElem(ElemType cur_e, ElemType* pre_e);
@@ -30,4 +30,5 @@ public:
 	Status ListInsert(int i, ElemType e);
 	Status ListDelete(int i, ElemType* e);
 	Status ListTraverse(Status(*visit)(ElemType));
+	Status ListChange(int position,ElemType newelem);
 };
