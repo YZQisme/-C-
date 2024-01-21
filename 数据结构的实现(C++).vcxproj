@@ -127,11 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\MyStack\MyStack\CircularDeque.cpp" />
+    <ClCompile Include="..\MyStack\MyStack\MyStack.cpp" />
     <ClCompile Include="AcycSinglyLinkList.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SqList.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\MyStack\MyStack\CircularDeque.h" />
+    <ClInclude Include="..\MyStack\MyStack\MyStack.h" />
     <ClInclude Include="AcycSinglyLinkList.h" />
     <ClInclude Include="SqList.h" />
   </ItemGroup>

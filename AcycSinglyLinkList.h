@@ -18,7 +18,7 @@ protected:
 	ASLL_node* head;
 	ASLL_node* tail;
 	int length;
-	class ASLL_Iterator {
+	class ASLL_Iterator {//迭代器，简化链表访问和操作
 	protected:
 		ASL_List* classptr;
 		ASLL_node* nodeptr;

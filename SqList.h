@@ -14,10 +14,11 @@ typedef int ElemType;
 static short increasetimes = 1;
 class SqList {
 protected:
-	ElemType* FirstElem;
-	int length;
+	ElemType* FirstElem;//存储数据及其一些信息
 	int listsize;
 public:
+	int length;
+	//基本操作函数的声明
 	SqList(void);
 	~SqList(void);
 	void ClearList();

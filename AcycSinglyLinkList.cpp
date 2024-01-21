@@ -11,6 +11,7 @@ ASL_List::ASLL_Iterator::ASLL_Iterator(ASL_List* ptr, int length) {
 	classptr = ptr;
 	nodeptr = ptr->tail;
 }
+//这些运算符是为了使链表操作像C++数组
 ASLL_node* ASL_List::ASLL_Iterator::operator++(int) {
 	if (ASLL_node* oldptr = this->nodeptr) {
 		this->nodeptr = this->nodeptr->next;
